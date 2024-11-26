@@ -111,3 +111,18 @@ void load_script()
 Este código debería compilar y funcionar en CLion sin necesidad de agregar la directiva _CRT_SECURE_NO_WARNINGS, ya que no se están utilizando las versiones seguras específicas de Microsoft de las funciones de la biblioteca estándar de C.
 
 Por último, ten en cuenta que este código no realiza una comprobación completa de errores y no es robusto contra varios tipos de errores de entrada. Dependiendo de tu caso de uso específico, es posible que desees agregar comprobaciones de errores adicionales y manejar los fallos de manera más sofisticada.
+
+### Ejercicio 3
+
+[Link del repositorio Corregido (Flavia Rivero)](https://github.com/flavi13/caso_final_integrador_tema3)
+
+#### Puntos a Positivos del codigo
+- Un correcto control de excepciones a la hora de abrir el archivo
+- Implementa colores para hacerlo mas visual e intuitivo con el usuario
+- Se controla el desbordamiento del buffer en `scanf()`
+
+#### Puntos a mejorar
+- Añadir un archivo `main.h` no es necesario ya que no es necesario importar nada del main en el resto del proyecto
+- **Se manejan excepciones que no pueden ocurrir**. Aunque no es un problema, se podría simplificar el código eliminando los bloques try-catch inecesarios
+- **Falta de comprobación del fin de archivo y posibles errores de lectura**. Sería útil comprobar también si se ha alcanzado el fin del archivo
+- **Potencial problema con archivos grandes**. Al leer archivos muy grandes, almacenar todo el contenido en una cadena puede consumir mucha memoria.
